@@ -31,15 +31,16 @@ body{
     background-color: #eeeeee;
     width: 98%;
     height: 95%;
-    font-size: 50px;
+    font-size: 4vw;
     border: 1px solid #393e46;
     border-radius: 3px;
     word-wrap: break-word;
+    box-sizing:content-box;
 }
 
 #painel-botao{
     background-color: #393e46;
-    height: 76vh;
+    height: 78%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -53,10 +54,10 @@ body{
     color: #eeeeee;
     width: 29%;
     height: 9%;
-    margin: 2%;
+    margin-left: 2%;
     border: 1px solid #eeeeee;
     border-radius: 2px;
-    font-size: 30px;
+    font-size: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,4 +72,14 @@ body{
     background-color: #ffd369;
     color: #393e46;
     border-color: #393e46;
+}
+@media (max-width: 768px)
+{
+
+    #painel{
+        font-size: 6vw;
+    }
+    .botao{
+        font-size: 3vw;
+    }
 }
