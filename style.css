@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "DS-Digital";
+    src: url("./fonts/DS-DIGIT.TTF");
+  }
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#corpo{
+    background-color: #393e46;
+    width: 45%;
+    height: 95vh;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#sobpainel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    border: 1px solid #eeeeee;
+    border-radius: 2px;
+}
+
+#painel{
+    font-family: 'DS-Digital';
+    background-color: #eeeeee;
+    width: 98%;
+    height: 95%;
+    font-size: 50px;
+    border: 1px solid #393e46;
+    border-radius: 3px;
+}
+
+#painel-botao{
+    background-color: #393e46;
+    height: 76vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #eeeeee;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botao{
+    background-color: #393e46;
+    color: #eeeeee;
+    width: 29%;
+    height: 9%;
+    margin: 2%;
+    border: 1px solid #eeeeee;
+    border-radius: 2px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao:hover{
+    color: #ffd369;
+    border-color: #ffd369;
+}
+
+.botao:active{
+    background-color: #ffd369;
+    color: #393e46;
+    border-color: #393e46;
+}

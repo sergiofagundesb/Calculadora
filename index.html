@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>calculadora</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="corpo">
+
+            <div id="sobpainel">
+
+                <div id="painel">0</div>
+
+            </div>
+
+            <div id="painel-botao">
+
+                <div class="botao" onclick="limpaDisplay()">CE</div>
+                <div class="botao">C</div>
+                <div class="botao">Apaga</div>
+                <div class="botao" id="1" onclick="capturaNumero(id)">1</div>
+                <div class="botao" id="2" onclick="capturaNumero(id)">2</div>
+                <div class="botao" id="3" onclick="capturaNumero(id)">3</div>
+                <div class="botao" id="4" onclick="capturaNumero(id)">4</div>
+                <div class="botao" id="5" onclick="capturaNumero(id)">5</div>
+                <div class="botao" id="6" onclick="capturaNumero(id)">6</div>
+                <div class="botao" id="7" onclick="capturaNumero(id)" >7</div>
+                <div class="botao" id="8" onclick="capturaNumero(id)">8</div>
+                <div class="botao" id="9" onclick="capturaNumero(id)">9</div>
+                <div class="botao" id="0" onclick="capturaNumero(id)">0</div>
+                <div class="botao">.</div>
+                <div class="botao">X</div>
+                <div class="botao">*</div>
+                <div class="botao">+</div>
+                <div class="botao">/</div>
+                <div class="botao">%</div>
+                <div class="botao">=</div>
+                <div class="botao">histórico</div>
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
