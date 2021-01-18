@@ -54,6 +54,7 @@ function limparUltimoNumero()
 document.getElementById("somar").addEventListener("click", somar);
 document.getElementById("multiplicar").addEventListener("click", multiplicar);
 document.getElementById("subtrair").addEventListener("click", subtrair);
+document.getElementById("dividir").addEventListener("click", dividir);
 
 function somar() {
     valoresBooleanos.soma = true;
@@ -83,6 +84,15 @@ function subtrair() {
     }
 }
 
+function dividir() {
+    valoresBooleanos.divisao = true;
+    if (valoresBooleanos.divisao == true) {
+        let display = document.getElementById("painel");
+        resultado = parseFloat(display.innerText);
+        display.innerText = "";
+    }
+}
+
 function resultadoFinal() {
     let display = document.getElementById("painel");
     if (valoresBooleanos.soma == true) {
@@ -95,6 +105,12 @@ function resultadoFinal() {
         resultado -= parseFloat(display.innerText);
         ultimo = parseFloat(display.innerText);
     }
+
+    else if (valoresBooleanos.divisao == true) {
+        resultado /= parseFloat(display.innerText);
+    }
+
+    
      else {
         resultado += ultimo;
     }
