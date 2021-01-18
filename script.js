@@ -83,3 +83,18 @@ function resultadoFinal() {
     display.innerText = resultado;
    // resultado = 0;
 }
+
+function colocaPonto(){
+    let display = document.getElementById("painel");
+    
+    if(numerosCalculadora.indexOf(".") == -1){
+        numerosCalculadora.push(".");
+        if(display.textContent == "0"){
+            display.textContent += numerosCalculadora.join('');
+        }else{
+            display.textContent = numerosCalculadora.join('');
+        }
+    }   
+    
+}
+/* Bloco de código que ajudara a por ponto para separação de numeros */
