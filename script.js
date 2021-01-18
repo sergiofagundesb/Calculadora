@@ -83,6 +83,15 @@ function subtrair() {
     }
 }
 
+function divir() {
+    valoresBooleanos.divisao = true;
+    if(valoresBooleanos.divisao == true) {
+        let display = document.getElementById("painel");
+        resultad = parseFloat(display.innerText);
+        display.innerText = "";
+    }
+}
+
 function resultadoFinal() {
     let display = document.getElementById("painel");
     if (valoresBooleanos.soma == true) {
@@ -94,8 +103,7 @@ function resultadoFinal() {
     } else if (valoresBooleanos.subtracao == true) {
         resultado -= parseFloat(display.innerText);
         ultimo = parseFloat(display.innerText);
-    }
-     else {
+    }  else {
         resultado += ultimo;
     }
     valoresBooleanos.soma = false;
@@ -108,7 +116,7 @@ function colocaPonto(){
         numerosCalculadora.push(".");
         if(display.textContent == "0"){
             display.textContent += numerosCalculadora.join('');
-        }else{
+        } else{
             display.textContent = numerosCalculadora.join('');
         }
     }   
