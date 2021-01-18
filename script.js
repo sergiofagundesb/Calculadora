@@ -1,8 +1,12 @@
+let valoresBooleanos = {
+    soma: false,
+    multiplica: false,
+    subtracao: false,
+    divisao: false,
+}
 let primeiroUso = true;
 let apagouNumero = false;
 let numerosCalculadora = [];
-let somando = false;
-let multiplicando = false;
 let resultado = 0;
 let ultimo = 0;
 function limpaDisplay(){
@@ -28,7 +32,7 @@ function capturaNumero(primeiroNumero){
     
     console.log(display.textContent);
 
-   return numero;
+    return numero;
 }
 
 function limparUltimoNumero()
@@ -49,10 +53,11 @@ function limparUltimoNumero()
 
 document.getElementById("somar").addEventListener("click", somar);
 document.getElementById("multiplicar").addEventListener("click", multiplicar);
+document.getElementById("subtrair").addEventListener("click", subtrair);
 
 function somar() {
-    somando = true;
-    if (somando == true) {
+    valoresBooleanos.soma = true;
+    if (valoresBooleanos.soma == true) {
         let display = document.getElementById("painel");
         resultado = parseFloat(display.innerText);
         console.log(`O resultado é ${resultado}`);
@@ -60,33 +65,45 @@ function somar() {
     }
 }
 
-// function multiplicar() {
-//     multiplicando = true;
-//     if (multiplicando == true) {
-//         let display = document.getElementById("painel");
-//         resultado = parseFloat(display.innerText);
-//         resultado * parseFloat(display.innerText);
-//         console.log(`O resultado é ${resultado}`);
-//         display.innerText = "";
-//     }
-// }
+function multiplicar() {
+    valoresBooleanos.multiplica = true;
+    if (valoresBooleanos.multiplica == true) {
+        let display = document.getElementById("painel");
+        resultado = parseFloat(display.innerText);
+        display.innerText = "";
+    }
+}
+
+function subtrair() {
+    valoresBooleanos.subtracao = true;
+    if (valoresBooleanos.subtracao == true) {
+        let display = document.getElementById("painel");
+        resultado = parseFloat(display.innerText);
+        display.innerText = "";
+    }
+}
 
 function resultadoFinal() {
     let display = document.getElementById("painel");
-    if (somando == true) {
+    if (valoresBooleanos.soma == true) {
         resultado += parseFloat(display.innerText); 
         ultimo = parseFloat(display.innerText);
-    }  else {
+    } else if (valoresBooleanos.multiplica == true) {
+        resultado *= parseFloat(display.innerText);
+        ultimo = parseFloat(display.innerText);
+    } else if (valoresBooleanos.subtracao == true) {
+        resultado -= parseFloat(display.innerText);
+        ultimo = parseFloat(display.innerText);
+    }
+     else {
         resultado += ultimo;
     }
-    somando = false;
+    valoresBooleanos.soma = false;
     display.innerText = resultado;
-   // resultado = 0;
 }
 
 function colocaPonto(){
     let display = document.getElementById("painel");
-    
     if(numerosCalculadora.indexOf(".") == -1){
         numerosCalculadora.push(".");
         if(display.textContent == "0"){
